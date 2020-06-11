@@ -1,11 +1,14 @@
-AllCops:
-  Exclude:
-    - 'test/kitchen/**/*'
-    - 'test/integration/**/controls/**/*.rb'
-    - 'test/fixtures/profiles/**/*.rb'
-    - 'test/fixtures/config_dirs/**/*.rb'
-    - 'lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/**/*'
-    - 'examples/**/controls/*.rb'
-    - 'vendor/bundle/**/*'
-Layout/AlignArguments:
-  EnforcedStyle: with_first_argument
+require:
+  - inspecstyle # Allows us to include our cops
+#
+# AllCops:
+#   Exclude:
+#     - 'test/kitchen/**/*'
+#     - 'test/integration/**/controls/**/*.rb'
+#     - 'test/fixtures/profiles/**/*.rb'
+#     - 'test/fixtures/config_dirs/**/*.rb'
+#     - 'lib/plugins/inspec-init/templates/plugins/inspec-plugin-template/**/*'
+#     - 'examples/**/controls/*.rb'
+#     - 'vendor/bundle/**/*'
+# Layout/ArgumentAlignment:
+#   EnforcedStyle: with_first_argument

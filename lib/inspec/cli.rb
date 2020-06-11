@@ -135,6 +135,9 @@ class Inspec::InspecCLI < Inspec::BaseCLI
         warnings = ui.yellow("#{result[:warnings].length} warnings", print: false)
         ui.plain_line("Summary:     #{errors}, #{warnings}")
       end
+
+      # Return InSpecStyle Output
+      ui.yellow(result[:inspecstyle])
     end
     ui.exit Inspec::UI::EXIT_USAGE_ERROR unless result[:summary][:valid]
   rescue StandardError => e

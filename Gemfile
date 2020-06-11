@@ -18,6 +18,8 @@ group :omnibus do
   gem "bcrypt_pbkdf" # ed25519 ssh key support done here as its a native gem we can't put in the gemspec
 end
 
+gem "inspecstyle", path: "../inspec-lint/inspec_style/inspecstyle", require: true
+
 group :test do
   gem "chefstyle", "~> 0.13.0"
   gem "minitest", "~> 5.5"

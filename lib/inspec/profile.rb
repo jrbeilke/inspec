@@ -350,6 +350,7 @@ module Inspec
     # @return [Boolean] true if no errors were found, false otherwise
     def check # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/MethodLength
       # initial values for response object
+
       result = {
         summary: {
           valid: false,
@@ -361,6 +362,10 @@ module Inspec
         errors: [],
         warnings: [],
       }
+
+      # Capture Rubocop run.
+      cmd = Mixlib::ShellOut.new("rubocop #{@target} --only InSpecStyle").run_command
+      result[:inspecstyle] = cmd.stdout
 
       entry = lambda { |file, line, column, control, msg|
         {

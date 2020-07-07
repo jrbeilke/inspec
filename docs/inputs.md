@@ -332,7 +332,7 @@ Allowed in: DSL, Metadata
 
 ### Sensitive
 
-Optional, `true` or `false`. If `true`, the value of the input will be used normally during the `exec` run, but the value will be obscured as "***" in the "inputs" or "attributes" section of any [Reporter](https://www.inspec.io/docs/reference/reporters) that explicitly lists Inputs (the `json` reporter is one such reporter). Note that this will not obscure input values that are used as test results.
+Optional, `true` or `false`. If `true`, the value of the input will be used normally during the `exec` run, but the value will be obscured as "***" in the "inputs" or "attributes" section of any [Reporter](https://www.inspec.io/docs/reference/reporters) that explicitly lists Inputs. (The `json` reporter is one such reporter.)This option will not obscure input values used as test results.
 
 Allowed in: Metadata
 
